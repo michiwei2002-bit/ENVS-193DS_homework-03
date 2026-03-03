@@ -1,0 +1,21 @@
+---
+title: "Homework 3"
+author: "Michael Weigand"
+format: html
+editor: visual
+[Link to my GitHub Repository](https://github.com/michiwei2002-bit/ENVS-193DS_homework-03.git)
+---
+
+
+
+```{r}
+# Load packages
+library(tidyverse)
+library(here)
+library(janitor)
+
+# Read in the soil salinity data
+salinity <- read_csv(here("Data", "salinity-pickleweed.csv")) %>% 
+  clean_names()
+```
+
