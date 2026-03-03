@@ -19,3 +19,10 @@ salinity <- read_csv(here("Data", "salinity-pickleweed.csv")) %>%
   clean_names()
 ```
 
+
+```{r}
+# Read in your personal data from your local 'Data' folder
+personal_data <- read_csv(here("Data", "personal_pushup_data.csv")) %>% 
+  clean_names()
+```
+
