@@ -3,9 +3,10 @@ title: "Homework 3"
 author: "Michael Weigand"
 format: html
 editor: visual
-[Link to my GitHub Repository](https://github.com/michiwei2002-bit/ENVS-193DS_homework-03.git)
+
 ---
 
+[Link to my GitHub Repository](https://github.com/michiwei2002-bit/ENVS-193DS_homework-03.git)
 
 
 ```{r}
@@ -98,7 +99,7 @@ summary(salinity_model)
 #Both the Pearson’s correlation and the simple linear regression led to the same decision to reject the null hypothesis, as both tests yielded a statistically significant p-value of 0.0086. While the correlation focused on the strength of the linear relationship ($r = 0.53$), the regression model provides a specific slope (Estimate = 2.08), which tells us that for every 1 mS/cm increase in soil salinity, we expect an average increase of approximately 2.08 grams in pickleweed biomass. Because both tests show a significant, positive trend, my interpretation of the biological relationship remains the same: higher salinity supports better growth for pickleweed at this location.
 
 
-Problem 2.
+#Problem 2a.
 
 ```{r}
 # Plot 1: Relationship between Sleep and Pushup Performance
@@ -129,4 +130,11 @@ ggplot(data = personal_data, aes(x = date, y = motivation)) +
     subtitle = "Most recent observation: February 26, 2026"
   )
 ```
+
+
+#2b.
+
+#CaptionsFigure 1: Relationship Between Sleep and Physical Performance: This scatterplot illustrates the correlation between nightly sleep duration (hours) and maximum pushup repetitions achieved the following day. The orange trend line indicates a positive relationship, suggesting that as sleep duration increases, physical output in the pushup test also tends to improve. Data represents observations from January 26th to February 26th, 2026.
+
+#Figure 2: Daily Motivation Levels Over Time:T his time series line graph tracks self reported motivation levels on a scale of 1–5 over a five-week period. The fluctuations show peaks and valleys in workout readiness, with the most recent data point recorded on February 26th, 2026. This visualization helps identify potential weekly patterns or burnout phases in the training schedule.
 
