@@ -21,8 +21,20 @@ salinity <- read_csv(here("Data", "salinity-pickleweed.csv")) %>%
 
 
 ```{r}
-# Read in your personal data from your local 'Data' folder
+# Read in personal data from 'Data' folder
 personal_data <- read_csv(here("Data", "personal_pushup_data.csv")) %>% 
   clean_names()
 ```
+
+
+#Problem 1: Slough soil salinity
+
+#1a. Selecting the Appropriate Statistical TestThe two appropriate tests to determine the strength of the relationship are Pearson’s Correlation (r) and Simple Linear Regression.
+
+#Pearson’s Correlation (r): This test tells us how closely the data points follow a straight line. It provides a single number between -1 and 1 that represents the direction and strength of the relationship but does not imply that one variable causes the other.
+
+#Simple Linear Regression: This test goes further by creating a mathematical model (a line of best fit) to describe the relationship. It allows us to predict the biomass based on a specific salinity level and tells us how much of the variation in biomass is actually explained by the salinity.
+
+
+
 
