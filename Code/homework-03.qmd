@@ -96,3 +96,37 @@ summary(salinity_model)
 ```
 
 #Both the Pearson’s correlation and the simple linear regression led to the same decision to reject the null hypothesis, as both tests yielded a statistically significant p-value of 0.0086. While the correlation focused on the strength of the linear relationship ($r = 0.53$), the regression model provides a specific slope (Estimate = 2.08), which tells us that for every 1 mS/cm increase in soil salinity, we expect an average increase of approximately 2.08 grams in pickleweed biomass. Because both tests show a significant, positive trend, my interpretation of the biological relationship remains the same: higher salinity supports better growth for pickleweed at this location.
+
+
+Problem 2.
+
+```{r}
+# Plot 1: Relationship between Sleep and Pushup Performance
+ggplot(data = personal_data, aes(x = sleep_hours, y = max_pushups)) +
+  geom_point(color = "steelblue", size = 3, alpha = 0.7) +
+  geom_smooth(method = "lm", color = "orange", se = FALSE) + # Add trend line
+  theme_classic() + # Removes grids and grey background
+  labs(
+    x = "Sleep Duration (hours)",
+    y = "Maximum Pushups (count)",
+    title = "Impact of Sleep on Daily Pushup Max",
+    subtitle = "Most recent observation: February 26, 2026"
+  )
+```
+
+
+```{r}
+# Plot 2: Trend of Motivation Levels over the study period
+ggplot(data = personal_data, aes(x = date, y = motivation)) +
+  geom_line(color = "firebrick", linewidth = 1) +
+  geom_point(color = "firebrick", size = 2) +
+  theme_minimal() + 
+  theme(panel.grid.minor = element_blank()) + # Further cleaning visual clutter
+  labs(
+    x = "Date",
+    y = "Motivation Level (1-5 scale)",
+    title = "Workout Motivation Trends (Jan - Mar 2026)",
+    subtitle = "Most recent observation: February 26, 2026"
+  )
+```
+
