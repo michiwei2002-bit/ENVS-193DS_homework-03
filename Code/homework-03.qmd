@@ -36,5 +36,18 @@ personal_data <- read_csv(here("Data", "personal_pushup_data.csv")) %>%
 #Simple Linear Regression: This test goes further by creating a mathematical model (a line of best fit) to describe the relationship. It allows us to predict the biomass based on a specific salinity level and tells us how much of the variation in biomass is actually explained by the salinity.
 
 
+#1b.
+```{r}
+# Create scatterplot to show the relationship between salinity and biomass
+ggplot(data = salinity, aes(x = salinity_m_s_cm, y = pickleweed)) +
+  geom_point(color = "darkcyan", size = 2) + # Change color from default and adjust size
+  theme_bw() +                             # Change theme from default (white background)
+  labs(
+    x = "Soil Salinity (mS/cm)",           # Relabel x-axis with units
+    y = "Pickleweed Biomass (g)",          # Relabel y-axis with units
+    title = "Pickleweed Biomass vs. Soil Salinity",
+    subtitle = "Analysis of plant growth in brackish slough restoration site"
+  )
+```
 
 
