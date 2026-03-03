@@ -36,7 +36,8 @@ personal_data <- read_csv(here("Data", "personal_pushup_data.csv")) %>%
 #Simple Linear Regression: This test goes further by creating a mathematical model (a line of best fit) to describe the relationship. It allows us to predict the biomass based on a specific salinity level and tells us how much of the variation in biomass is actually explained by the salinity.
 
 
-#1b.
+
+#1b
 ```{r}
 # Create scatterplot to show the relationship between salinity and biomass
 ggplot(data = salinity, aes(x = salinity_m_s_cm, y = pickleweed)) +
@@ -51,3 +52,24 @@ ggplot(data = salinity, aes(x = salinity_m_s_cm, y = pickleweed)) +
 ```
 
 
+#1c.
+```{r}
+# Checking for linearity: We look at the scatterplot we made in 1b.
+# Checking for normality: We use a Q-Q plot to see if the biomass follows a normal distribution.
+ggplot(salinity, aes(sample = pickleweed)) +
+  stat_qq() +
+  stat_qq_line(color = "red") +
+  theme_minimal() +
+  labs(title = "Q-Q Plot for Pickleweed Biomass")
+```
+
+#I checked the assumptions of linearity and normality for this analysis. I assessed linearity by reviewing the scatterplot created in Part 1b and checked the normality of the biomass data using the Q-Q plot above. Because the points in the Q-Q plot closely follow the straight diagonal line, I assess that the data is approximately normally distributed and meets the assumptions for a Pearson’s correlation.
+
+
+```{r}
+# Running a Pearson's Correlation Test
+# This measures the strength and direction of the relationship between salinity and biomass
+cor.test(salinity$salinity_m_s_cm, salinity$pickleweed)
+```
+
+#To evaluate the strength of the relationship between pickleweed biomass and soil salinity, I used a Pearson’s correlation test. I found a moderate, positive relationship between the two variables (r = 0.53, p = 0.0086), suggesting that as soil salinity increases, the biomass of the California pickleweed also tends to increase.
