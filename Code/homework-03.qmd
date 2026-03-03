@@ -83,3 +83,16 @@ cor.test(salinity$salinity_m_s_cm, salinity$pickleweed)
 
 
 #1e.Our analysis indicates a moderate positive relationship between soil salinity and pickleweed growth, suggesting that these plants are more successful in saltier conditions at our restoration site. To maximize restoration success, we should prioritize planting new pickleweed in areas with higher electrical conductivity, as these locations are currently producing significantly more biomass.
+
+
+#1f.
+```{r}
+# Running a Simple Linear Regression
+# Format: lm(y_variable ~ x_variable, data = your_data_name)
+salinity_model <- lm(pickleweed ~ salinity_m_s_cm, data = salinity)
+
+# Display the summary of the model to see p-values and coefficients
+summary(salinity_model)
+```
+
+#Both the Pearson’s correlation and the simple linear regression led to the same decision to reject the null hypothesis, as both tests yielded a statistically significant p-value of 0.0086. While the correlation focused on the strength of the linear relationship ($r = 0.53$), the regression model provides a specific slope (Estimate = 2.08), which tells us that for every 1 mS/cm increase in soil salinity, we expect an average increase of approximately 2.08 grams in pickleweed biomass. Because both tests show a significant, positive trend, my interpretation of the biological relationship remains the same: higher salinity supports better growth for pickleweed at this location.
