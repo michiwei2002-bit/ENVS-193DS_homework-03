@@ -138,3 +138,15 @@ ggplot(data = personal_data, aes(x = date, y = motivation)) +
 
 #Figure 2: Daily Motivation Levels Over Time:T his time series line graph tracks self reported motivation levels on a scale of 1–5 over a five-week period. The fluctuations show peaks and valleys in workout readiness, with the most recent data point recorded on February 26th, 2026. This visualization helps identify potential weekly patterns or burnout phases in the training schedule.
 
+
+
+
+
+
+#Problem 3
+
+#3a.
+#Inspired by Jill Pelto’s watercolor art, my affective data visualization will be a hand drawn mountain landscape that prioritizes creativity and novelty over traditional graphing rules. The continuous peaks and valleys of the mountain range will map directly to my daily max_pushups count, visually illustrating the physical highs and lows of my month long routine. For example the highest peak will represent the 51 pushups I completed on February 22nd, while a low valley will depict the 30 pushups from January 27th. To evoke the mental toll of the challenge, the weather patterns above each peak will reflect my daily motivation score. Bright, clear skies will hover over days where my motivation was at a level 5, whereas dark, stormy clouds will loom over the mountains on days my motivation plummeted to a level 1
+
+
+
